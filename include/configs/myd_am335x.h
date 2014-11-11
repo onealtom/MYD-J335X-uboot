@@ -205,7 +205,7 @@
  /* Physical Memory Map */
 #define CONFIG_NR_DRAM_BANKS		1		/* 1 bank of DRAM */
 #define PHYS_DRAM_1			0x80000000	/* DRAM Bank #1 */
-#define PHYS_DRAM_1_SIZE		0x10000000	/* 256 MiB */
+#define PHYS_DRAM_1_SIZE CONFIG_DRAM_SIZE /* DRAM size */
 
 #define CONFIG_SYS_SDRAM_BASE		PHYS_DRAM_1
 #define CONFIG_SYS_INIT_RAM_ADDR	SRAM0_START
