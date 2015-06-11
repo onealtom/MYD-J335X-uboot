@@ -107,6 +107,10 @@
  * Initialization, must be called once on start up, may be called
  * repeatedly to change the speed and slave addresses.
  */
+/* Added by Conway */
+const u32 get_i2c_base(void);
+void set_i2c_base(const u32 base);
+
 void i2c_init(int speed, int slaveaddr);
 void i2c_init_board(void);
 #ifdef CONFIG_SYS_I2C_BOARD_LATE_INIT

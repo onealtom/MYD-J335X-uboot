@@ -54,6 +54,17 @@ static u32 i2c_base = (u32)I2C_DEFAULT_BASE;
 static unsigned int bus_initialized[I2C_BUS_MAX];
 static unsigned int current_bus;
 
+/* Added by Conway */
+const u32 get_i2c_base(void)
+{
+	return i2c_base;
+}
+
+void set_i2c_base(const u32 base)
+{
+	i2c_base = base;
+}
+
 void i2c_init(int speed, int slaveadd)
 {
 	int psc, fsscll, fssclh;
@@ -165,7 +176,7 @@ int i2c_probe(uchar chip)
 {
 	int res = 1; /* default = fail */
 	u32 status;
-
+	
 	if (chip == readw ((i2c_base + I2C_OA_OFS)))
 		return res;
 

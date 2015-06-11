@@ -17,7 +17,7 @@ include $(TOPDIR)/config.mk
 
 LIB	= $(obj)lib$(BOARD).o
 
-COBJS	:= evm.o pll.o mux.o pmic_tps65217.o
+COBJS	:= evm.o pll.o mux.o pmic_tps65217.o myir_header.o
 
 SRCS	:= $(SOBJS:.o=.S) $(COBJS:.o=.c)
 OBJS	:= $(addprefix $(obj),$(COBJS))
